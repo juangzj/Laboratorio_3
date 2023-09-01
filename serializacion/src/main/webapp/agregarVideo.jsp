@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Sistema reproductor de video</h1>
-        <form action="SvVideo" method="GET">
+        <form action="SvVideo" method="POST">
             
             <label for="idVideo">idVideo: </label>
             <input type="text" name="idVideo"><br>

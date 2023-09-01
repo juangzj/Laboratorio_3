@@ -16,7 +16,7 @@
       
         <ul>
             <li> <a href="agregarVideo.jsp">Ingresar un nuevo video</a></li>
-            <li>second</li>
+            <li><a href="listarVideo.jsp">Listar video</a></li>
             <li>third</li>
         </ul>
 
