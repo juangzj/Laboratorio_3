@@ -11,25 +11,32 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Página JSP</title>
+        <link rel="stylesheet" type="text/css" href="listarVideoInterfaz.css">
     </head>
     <body>
-        <h1>Listar Videos</h1>
+        <div class="contenedor">
+            <h1 class="encabezado">Listar Videos</h1>
 
-        <%
-            //obtener el arrayList de la solicitud
-            ArrayList<Video> misVideos = (ArrayList<Video>) request.getAttribute("misVideos");
+            <%
+                // Obtiene el ArrayList de videos de la solicitud
+                ArrayList<Video> misVideos = (ArrayList<Video>) request.getAttribute("misVideos");
 
-            //mostrar los datos de array
-            for (Video v : misVideos) {
-                out.println("idVideo: " + v.getIdVideo() + "<br>");
-                out.println("Titulo: " + v.getTitulo() + "<br>");
-                out.println("autor: " + v.getAutor()+ "<br>");
-                out.println("Año: " + v.getAnio()+ "<br>");
-                out.println("Genero: " + v.getGenero()+ "<br>");
-                out.println("URL: " + v.getUrl()+ "<br>");
-                out.println("Letra: " + v.getLetra()+ "<br>");
-            }
-        %>
+                // Recorre los videos y los muestra
+                for (Video v : misVideos) {
+            %>
+            <div class="video">
+                <p class="id-video">ID de Video: <%= v.getIdVideo()%></p>
+                <p class="titulo-video">Título: <%= v.getTitulo()%></p>
+                <p class="autor-video">Autor: <%= v.getAutor()%></p>
+                <p class="anio-video">Año: <%= v.getAnio()%></p>
+                <p class="genero-video">Género: <%= v.getGenero()%></p>
+                <p class="url-video">URL: <%= v.getUrl()%></p>
+                <p class="letra-video">Letra: <%= v.getLetra()%></p>
+            </div>
+            <%
+                }
+            %>
+        </div>
     </body>
 </html>

@@ -9,7 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="agregarVideoInterfaz.css"/>
         <title>Reproductor de música</title>
+        
     </head>
     <body>
         <h1>Sistema reproductor de video</h1>
